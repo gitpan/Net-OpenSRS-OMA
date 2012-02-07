@@ -8,7 +8,7 @@ use JSON;
 use LWP::UserAgent;
 use Carp;
 
-our $VERSION = "0.01_01";
+our $VERSION = "0.01_02";
 $VERSION = eval $VERSION;
 
 =head1 NAME
@@ -100,7 +100,7 @@ sub new($@)
   }
   $self->{URI} = $args{uri};
   my $client = $args{client};
-  $client = "Perl OMA Client" unless $client;
+  $client = "Perl OMA Client\\$VERSION" unless $client;
   $self->{CREDENTIALS} = { 
     user => $args{user}, 
     client => $client
@@ -110,7 +110,7 @@ sub new($@)
   else { $self->{CREDENTIALS}->{token} = $args{token}}
 
   $self->{UA} = LWP::UserAgent->new;
-  $self->{UA}->agent("PerlOMAClient/$VERSION");
+  $self->{UA}->agent($client);
 
   return bless($self, $class);
 }
