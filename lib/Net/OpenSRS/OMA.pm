@@ -8,7 +8,7 @@ use JSON;
 use LWP::UserAgent;
 use Carp;
 
-our $VERSION = "0.01_02";
+our $VERSION = "0.02";
 $VERSION = eval $VERSION;
 
 =head1 NAME

@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Net-OpenSRS-OMA
-version:            0.01_02
+version:            0.02
 abstract:           Client library for the OpenSRS Mail API
 author:
     - Richard Platel <rplatel@opensrs.org>
